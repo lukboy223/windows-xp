@@ -1,0 +1,592 @@
+.flip-card {
+  background-color: transparent;
+  width: 20em;
+  height: 30em;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 20em;
+  height: 30em;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 20em;
+  height: 30em;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+.flip-card-front img {
+  width: 20em;
+  height: 30em;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  background-color: black;
+  transform: rotateY(180deg);
+  color: white;
+}
+
+.animeButton {
+  background-color: white;
+  border-radius: 1em;
+  padding: 0.5em;
+}
+
+.animeform {
+  border-style: double;
+  padding: 1em !important;
+  background-color: #d3e5fa;
+  margin: 3em;
+}
+.animeform form input {
+  background-color: white;
+  color: black;
+  margin-bottom: 1em;
+}
+
+.animeRow {
+  justify-content: center;
+  display: flex;
+  margin-top: 4em;
+}
+
+.animeSort {
+  justify-content: center;
+  display: flex;
+  margin-top: 3em;
+}
+.animeSort button {
+  all: unset;
+  margin: 1em;
+  background-color: white;
+  padding: 0.5em;
+  color: black;
+  font-family: monospace;
+  border-radius: 0.5em;
+  transition: 0.5s;
+  border-style: groove;
+}
+.animeSort button:hover {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 576px) {
+  .container {
+    width: 476px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 668px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    width: 892px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1100px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container {
+    width: 1300px;
+  }
+}
+
+.row,
+.col,
+[class^=col-],
+[class*=" col-"],
+.inner {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.col,
+[class^=col-],
+[class*=" col-"] {
+  flex-direction: column;
+  max-width: 100%;
+  padding: 0.5rem;
+}
+.col .inner,
+[class^=col-] .inner,
+[class*=" col-"] .inner {
+  flex-direction: column;
+  height: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.col {
+  flex-grow: 1;
+}
+@media screen and (max-width: 576px) {
+  .col {
+    width: 100%;
+  }
+}
+
+[class^=col-],
+[class*=" col-"] {
+  flex: 0 0 auto;
+}
+
+@media screen and (min-width: 576px) {
+  .col-s-1 {
+    width: 8.3333333333%;
+  }
+  .col-s-2 {
+    width: 16.6666666667%;
+  }
+  .col-s-3 {
+    width: 25%;
+  }
+  .col-s-4 {
+    width: 33.3333333333%;
+  }
+  .col-s-5 {
+    width: 41.6666666667%;
+  }
+  .col-s-6 {
+    width: 50%;
+  }
+  .col-s-7 {
+    width: 58.3333333333%;
+  }
+  .col-s-8 {
+    width: 66.6666666667%;
+  }
+  .col-s-9 {
+    width: 75%;
+  }
+  .col-s-10 {
+    width: 83.3333333333%;
+  }
+  .col-s-11 {
+    width: 91.6666666667%;
+  }
+  .col-s-12 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .col-m-1 {
+    width: 8.3333333333%;
+  }
+  .col-m-2 {
+    width: 16.6666666667%;
+  }
+  .col-m-3 {
+    width: 25%;
+  }
+  .col-m-4 {
+    width: 33.3333333333%;
+  }
+  .col-m-5 {
+    width: 41.6666666667%;
+  }
+  .col-m-6 {
+    width: 50%;
+  }
+  .col-m-7 {
+    width: 58.3333333333%;
+  }
+  .col-m-8 {
+    width: 66.6666666667%;
+  }
+  .col-m-9 {
+    width: 75%;
+  }
+  .col-m-10 {
+    width: 83.3333333333%;
+  }
+  .col-m-11 {
+    width: 91.6666666667%;
+  }
+  .col-m-12 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .col-l-1 {
+    width: 8.3333333333%;
+  }
+  .col-l-2 {
+    width: 16.6666666667%;
+  }
+  .col-l-3 {
+    width: 25%;
+  }
+  .col-l-4 {
+    width: 33.3333333333%;
+  }
+  .col-l-5 {
+    width: 41.6666666667%;
+  }
+  .col-l-6 {
+    width: 50%;
+  }
+  .col-l-7 {
+    width: 58.3333333333%;
+  }
+  .col-l-8 {
+    width: 66.6666666667%;
+  }
+  .col-l-9 {
+    width: 75%;
+  }
+  .col-l-10 {
+    width: 83.3333333333%;
+  }
+  .col-l-11 {
+    width: 91.6666666667%;
+  }
+  .col-l-12 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .col-xl-1 {
+    width: 8.3333333333%;
+  }
+  .col-xl-2 {
+    width: 16.6666666667%;
+  }
+  .col-xl-3 {
+    width: 25%;
+  }
+  .col-xl-4 {
+    width: 33.3333333333%;
+  }
+  .col-xl-5 {
+    width: 41.6666666667%;
+  }
+  .col-xl-6 {
+    width: 50%;
+  }
+  .col-xl-7 {
+    width: 58.3333333333%;
+  }
+  .col-xl-8 {
+    width: 66.6666666667%;
+  }
+  .col-xl-9 {
+    width: 75%;
+  }
+  .col-xl-10 {
+    width: 83.3333333333%;
+  }
+  .col-xl-11 {
+    width: 91.6666666667%;
+  }
+  .col-xl-12 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .col-xxl-1 {
+    width: 8.3333333333%;
+  }
+  .col-xxl-2 {
+    width: 16.6666666667%;
+  }
+  .col-xxl-3 {
+    width: 25%;
+  }
+  .col-xxl-4 {
+    width: 33.3333333333%;
+  }
+  .col-xxl-5 {
+    width: 41.6666666667%;
+  }
+  .col-xxl-6 {
+    width: 50%;
+  }
+  .col-xxl-7 {
+    width: 58.3333333333%;
+  }
+  .col-xxl-8 {
+    width: 66.6666666667%;
+  }
+  .col-xxl-9 {
+    width: 75%;
+  }
+  .col-xxl-10 {
+    width: 83.3333333333%;
+  }
+  .col-xxl-11 {
+    width: 91.6666666667%;
+  }
+  .col-xxl-12 {
+    width: 100%;
+  }
+}
+.anime {
+  visibility: hidden;
+  background-color: #f6f6f2;
+  width: 40em;
+}
+
+#animeTab {
+  position: absolute;
+  border-style: groove;
+  width: fit-content;
+  height: 40em;
+}
+
+#animeTabHeader {
+  border-bottom-style: groove;
+  background-color: #025de9;
+}
+
+.note {
+  visibility: hidden;
+  background-color: #f6f6f2;
+  width: 40em;
+}
+
+#noteTab {
+  position: absolute;
+  border-style: groove;
+  width: fit-content;
+  height: 40em;
+}
+
+#noteTabHeader {
+  border-bottom-style: groove;
+  background-color: #025de9;
+}
+
+.fileEx {
+  visibility: hidden;
+  background-color: #f6f6f2;
+  width: 40em;
+}
+
+#fileExTab {
+  position: absolute;
+  border-style: groove;
+  width: fit-content;
+  height: 40em;
+}
+
+#fileExTabHeader {
+  border-bottom-style: groove;
+  background-color: #025de9;
+}
+
+.leftTab {
+  height: 1.5em;
+}
+.leftTab img {
+  height: 1.5em;
+  float: left;
+}
+.leftTab h1 {
+  font-size: 1.5em;
+  float: left;
+  margin: 0;
+  margin-left: 0.5em;
+}
+.leftTab .rightTab {
+  height: 1.5em;
+}
+.leftTab .rightTab img {
+  height: 1.5em;
+  float: right;
+  cursor: pointer;
+}
+
+.tab {
+  z-index: 10;
+}
+
+body {
+  margin: 0;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.wallpaper {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.wallpaper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.startup {
+  background-image: url("../../img/start-up.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: wait;
+}
+
+.fade {
+  position: relative;
+}
+
+.fade::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 7em;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(69, 138, 224));
+  pointer-events: none;
+}
+
+.loginInput {
+  position: fixed;
+  right: 23%;
+  top: 40%;
+  padding: 1em;
+  padding-right: 10em;
+  background-color: #0043a9;
+  color: white;
+  border: 2px solid white;
+  border-radius: 14px;
+  border-right: none;
+}
+
+.userImg {
+  height: 8em;
+  border: 3px solid white;
+  border-radius: 3px;
+}
+
+ul {
+  float: right;
+  padding: 1em;
+}
+ul li {
+  margin-top: 1em;
+  list-style: none;
+}
+ul li h1 {
+  margin: 0;
+  float: right;
+}
+ul li input {
+  float: right;
+}
+ul li h4 {
+  margin: 0;
+  margin-top: 1em;
+}
+
+#loginPass {
+  visibility: hidden;
+}
+
+.animeInner {
+  overflow: scroll;
+  height: 38.2em;
+  width: 82em;
+}
+
+.app {
+  width: 10em;
+  height: 10em;
+  text-align: center;
+  margin: 1em;
+}
+.app img {
+  height: 7em;
+  width: 7em;
+  object-fit: cover;
+}
+.app h1 {
+  text-align: center;
+  margin: 0;
+}
+
+.menuBar {
+  position: fixed;
+  bottom: 0;
+  background-color: #235bdc;
+  width: 100%;
+  height: 2em;
+  float: left;
+}
+
+.homeButton {
+  height: 2em;
+  float: left;
+  margin-right: 1em;
+}
+
+.tabMenu {
+  background-color: #3c7df1;
+  float: left;
+  padding: 0.15em;
+  visibility: hidden;
+  width: 9em;
+}
+.tabMenu img {
+  height: 1.7em;
+  object-fit: cover;
+}
+.tabMenu h1 {
+  margin: 0;
+  float: right;
+  margin-left: 0.4em;
+  margin-right: 2em;
+  color: white;
+}
+
+.tabMenuNote {
+  position: absolute;
+}
+
+.menuTabs {
+  margin-left: 6em;
+}
+
+.noteInput {
+  height: 40.3em;
+  width: 82em;
+}
+
+.noteList {
+  height: 3em;
+}
+.noteList img {
+  height: 3em;
+}
+
+/*# sourceMappingURL=style.css.map */

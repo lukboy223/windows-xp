@@ -1,0 +1,91 @@
+.flip-card {
+    background-color: transparent;
+    width: 20em;
+    height: 30em;
+    perspective: 1000px;
+   
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 20em;
+    height: 30em;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 20em;
+    height: 30em;
+    backface-visibility: hidden;
+  }
+  
+
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+    img{
+        width: 20em;
+        height: 30em;
+        object-fit: cover;
+    }
+  }
+  .flip-card-back {
+    background-color: black;
+    transform: rotateY(180deg);
+    color: white;
+    
+}
+.animeButton{
+  background-color: white;
+  border-radius: 1em;
+  padding: 0.5em;
+}
+
+.animeform{
+    border-style: double;
+    padding: 1em !important;
+    background-color: #d3e5fa;
+    margin: 3em;
+
+    form{
+    input{
+        background-color: white;
+        color: black;
+        margin-bottom: 1em;
+      }
+    }
+}
+.animeRow{
+  justify-content: center;
+  display: flex;
+  margin-top: 4em;
+}
+.animeSort{
+  justify-content: center;
+  display: flex;
+  margin-top: 3em;
+  
+  button{
+    all: unset;
+    margin: 1em;
+    background-color: white;
+    padding: 0.5em;
+    color: black;
+    font-family: monospace;
+    border-radius: 0.5em;
+    transition: 0.5s;
+    border-style: groove;
+  }
+  button:hover{
+    background-color: black;
+    color: white;
+   
+  }
+}

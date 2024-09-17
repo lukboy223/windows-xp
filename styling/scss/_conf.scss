@@ -1,0 +1,14 @@
+$config: (
+  "columncount": 12,
+  "screensizes": (
+    "s": 576px,
+    "m": 768px,
+    "l": 992px,
+    "xl": 1200px,
+    "xxl": 1400px,
+  )
+);
+
+@function get($key) {
+  @return map-get($config, $key);
+}

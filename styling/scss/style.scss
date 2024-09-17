@@ -1,0 +1,177 @@
+@use "anime";
+@use "col";
+@use "tab";
+
+body {
+    margin: 0;
+    // background-image: url('../../img/windows_xp.jpg');
+    // background-size: cover;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+.wallpaper {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.startup {
+    background-image: url('../../img/start-up.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: wait;
+}
+
+.fade {
+    position: relative;
+}
+
+.fade::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 7em;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(69, 138, 224, 255));
+    pointer-events: none;
+}
+
+.loginInput {
+    position: fixed;
+    right: 23%;
+    top: 40%;
+    padding: 1em;
+    padding-right: 10em;
+    background-color: #0043a9;
+    color: white;
+    border: 2px solid white;
+    border-radius: 14px;
+    border-right: none;
+
+}
+
+.userImg {
+    height: 8em;
+    border: 3px solid white;
+    border-radius: 3px;
+}
+
+ul {
+    float: right;
+    padding: 1em;
+
+    li {
+        margin-top: 1em;
+        list-style: none;
+
+        h1 {
+            margin: 0;
+            float: right;
+        }
+
+        input {
+            float: right;
+        }
+
+        h4 {
+            margin: 0;
+            margin-top: 1em;
+        }
+    }
+}
+
+#loginPass {
+    visibility: hidden;
+}
+
+.animeInner {
+    overflow: scroll;
+    height: 38.2em;
+    width: 82em;
+}
+
+.app {
+    width: 10em;
+    height: 10em;
+    text-align: center;
+    margin: 1em;
+
+    img {
+        height: 7em;
+        width: 7em;
+        object-fit: cover;
+    }
+
+    h1 {
+        text-align: center;
+        margin: 0;
+    }
+}
+
+.menuBar {
+    position: fixed;
+    bottom: 0;
+    background-color: #235bdc;
+    width: 100%;
+    height: 2em;
+    float: left;
+}
+
+.homeButton {
+    height: 2em;
+    float: left;
+    margin-right: 1em;
+}
+
+.tabMenu {
+    background-color: #3c7df1;
+    float: left;
+    padding: 0.15em;
+    visibility: hidden;
+    width: 9em;
+
+    img {
+        height: 1.7em;
+        object-fit: cover;
+
+    }
+
+    h1 {
+        margin: 0;
+        float: right;
+        margin-left: 0.4em;
+        margin-right: 2em;
+        color: white;
+    }
+}
+
+.tabMenuNote {
+    position: absolute;
+
+}
+
+.menuTabs {
+    margin-left: 6em;
+}
+
+.noteInput {
+    height: 40.3em;
+    width: 82em;
+}
+
+.noteList {
+    height: 3em;
+
+    img {
+        height: 3em;
+    }
+}
+

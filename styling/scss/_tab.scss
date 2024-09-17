@@ -1,0 +1,74 @@
+
+.anime{
+    visibility: hidden;
+    background-color: #f6f6f2;
+    width: 40em;
+}
+#animeTab{
+       position: absolute;
+       border-style: groove;
+       width: fit-content;
+       height: 40em;
+}
+#animeTabHeader{
+   border-bottom-style: groove;
+   background-color: #025de9;
+}
+
+.note{
+    visibility: hidden;
+    background-color: #f6f6f2;
+    width: 40em;
+}
+#noteTab{
+       position: absolute;
+       border-style: groove;
+       width: fit-content;
+       height: 40em;
+}
+   #noteTabHeader{
+   border-bottom-style: groove;
+   background-color: #025de9;
+}
+
+.fileEx{
+    visibility: hidden;
+    background-color: #f6f6f2;
+    width: 40em;
+}
+#fileExTab{
+       position: absolute;
+       border-style: groove;
+       width: fit-content;
+       height: 40em;
+}
+   #fileExTabHeader{
+   border-bottom-style: groove;
+   background-color: #025de9;
+}
+
+
+.leftTab{
+    height: 1.5em;
+    img{
+       height: 1.5em;
+       float: left;
+    }
+    h1{
+        font-size: 1.5em;
+        float: left;
+        margin: 0;
+        margin-left: 0.5em;
+    }
+    .rightTab{
+       height: 1.5em;
+       img{
+           height: 1.5em;
+           float: right;
+           cursor: pointer;
+       }
+    }
+}
+.tab{
+    z-index: 10;
+}
